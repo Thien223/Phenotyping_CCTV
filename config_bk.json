@@ -138,7 +138,7 @@
       "channels": {
         "0": {
           "name": "ch1",
-          "url": "rtsp://admin:admin1357@192.168.100.110:554/cam/realmonitor?channel=1&subtype=0",
+          "url": "rtsp://192.168.100.110:554/stream1",
           "on_demand": true,
           "debug": false,
           "status": 0
@@ -150,7 +150,7 @@
       "channels": {
         "0": {
           "name": "ch1",
-          "url": "rtsp://admin:admin1357@192.168.100.111:554/cam/realmonitor?channel=1&subtype=0",
+          "url": "rtsp://192.168.100.111:554/stream1",
           "on_demand": true,
           "debug": false,
           "status": 0
@@ -162,7 +162,7 @@
       "channels": {
         "0": {
           "name": "ch1",
-          "url": "rtsp://admin:admin1357@192.168.100.112:554/cam/realmonitor?channel=1&subtype=0",
+          "url": "rtsp://192.168.100.112:554/stream1",
           "on_demand": true,
           "debug": false,
           "status": 0
@@ -174,7 +174,7 @@
       "channels": {
         "0": {
           "name": "ch1",
-          "url": "rtsp://admin:admin1357@192.168.100.113:554/cam/realmonitor?channel=1&subtype=0",
+          "url": "rtsp://192.168.100.113:554/stream1",
           "on_demand": true,
           "debug": false,
           "status": 0

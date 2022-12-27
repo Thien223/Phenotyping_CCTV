@@ -1,0 +1,107 @@
+{
+  "channel_defaults": {
+    "on_demand": true
+  },
+  "server": {
+    "debug": true,
+    "http_debug": false,
+    "http_demo": true,
+    "http_dir": "",
+    "http_login": "demo",
+    "http_password": "demo",
+    "http_port": ":8520",
+    "https": false,
+    "https_auto_tls": false,
+    "https_auto_tls_name": "",
+    "https_cert": "",
+    "https_key": "",
+    "https_port": "",
+    "ice_credential": "",
+    "ice_servers": [
+      "stun:stun.l.google.com:19302"
+    ],
+    "ice_username": "",
+    "log_level": "info",
+    "rtsp_port": ":5541",
+    "token": {
+      "backend": "",
+      "enable": false
+    },
+    "webrtc_port_max": 0,
+    "webrtc_port_min": 0
+  },
+  "streams": {
+    "demo1": {
+      "channels": {
+        "0": {
+          "on_demand": true,
+          "url": "rtsp://192.168.100.116:554/stream1"
+        },
+        "1": {
+          "on_demand": true,
+          "url": "rtsp://admin:1q2w3e4rA@192.168.100.101:554/profile2/media.smp"
+        },
+        "10": {
+          "on_demand": true,
+          "url": "rtsp://192.168.100.107:554/stream1"
+        },
+        "11": {
+          "on_demand": true,
+          "url": "rtsp://192.168.100.108:554/stream1"
+        },
+        "12": {
+          "on_demand": true,
+          "url": "rtsp://192.168.100.109:554/stream1"
+        },
+        "2": {
+          "on_demand": true,
+          "url": "rtsp://192.168.100.110:554/stream1"
+        },
+        "3": {
+          "on_demand": true,
+          "url": "rtsp://192.168.100.111:554/stream1"
+        },
+        "4": {
+          "on_demand": true,
+          "url": "rtsp://192.168.100.112:554/stream1"
+        },
+        "5": {
+          "on_demand": true,
+          "url": "rtsp://admin:1q2w3e4rA@192.168.100.102:554/profile2/media.smp"
+        },
+        "6": {
+          "on_demand": true,
+          "url": "rtsp://admin:1q2w3e4rA@192.168.100.103:554/profile2/media.smp"
+        },
+        "7": {
+          "on_demand": true,
+          "url": "rtsp://admin:1q2w3e4rA@192.168.100.104:554/profile2/media.smp"
+        },
+        "8": {
+          "on_demand": true,
+          "url": "rtsp://192.168.100.105:554/stream1"
+        },
+        "9": {
+          "on_demand": true,
+          "url": "rtsp://192.168.100.106:554/stream1"
+        }
+      },
+      "name": "test video stream 1"
+    },
+    "demo2": {
+      "channels": {
+        "0": {
+          "name": "ch1",
+          "on_demand": true,
+          "url": "rtsp://192.168.100.113:554/stream1"
+        },
+        "1": {
+          "name": "ch2",
+          "on_demand": true,
+          "url": "rtsp://192.168.100.115:554/stream1"
+        }
+      },
+      "name": "test video stream 2"
+    }
+  }
+}
