@@ -10,13 +10,13 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-//Message resp struct
+// Message resp struct
 type Message struct {
 	Status  int         `json:"status"`
 	Payload interface{} `json:"payload"`
 }
 
-//HTTPAPIServer start http server routes
+// HTTPAPIServer start http server routes
 func HTTPAPIServer() {
 	//Set HTTP API mode
 	log.WithFields(logrus.Fields{
@@ -46,25 +46,25 @@ func HTTPAPIServer() {
 
 	if Storage.ServerHTTPDemo() {
 		public.LoadHTMLGlob(Storage.ServerHTTPDir() + "/templates/*")
-		public.GET("/", HTTPAPIServerIndex)
-		public.GET("/pages/stream/list", HTTPAPIStreamList)
-		public.GET("/pages/stream/add", HTTPAPIAddStream)
-		public.GET("/pages/stream/edit/:uuid", HTTPAPIEditStream)
-		public.GET("/pages/player/hls/:uuid/:channel", HTTPAPIPlayHls)
-		public.GET("/pages/player/mse/:uuid/:channel", HTTPAPIPlayMse)
-		public.GET("/pages/player/webrtc/:uuid/:channel", HTTPAPIPlayWebrtc)
-		public.GET("/pages/multiview", HTTPAPIMultiview)
-		public.Any("/pages/multiview/full", HTTPAPIFullScreenMultiView)
-		public.GET("/pages/documentation", HTTPAPIServerDocumentation)
-		public.GET("/pages/player/all/:uuid/:channel", HTTPAPIPlayAll)
-		public.StaticFS("/static", http.Dir(Storage.ServerHTTPDir()+"/static"))
+		privat.GET("/", HTTPAPIServerIndex)
+		privat.GET("/pages/stream/list", HTTPAPIStreamList)
+		privat.GET("/pages/stream/add", HTTPAPIAddStream)
+		privat.GET("/pages/stream/edit/:uuid", HTTPAPIEditStream)
+		privat.GET("/pages/player/hls/:uuid/:channel", HTTPAPIPlayHls)
+		privat.GET("/pages/player/mse/:uuid/:channel", HTTPAPIPlayMse)
+		privat.GET("/pages/player/webrtc/:uuid/:channel", HTTPAPIPlayWebrtc)
+		privat.GET("/pages/multiview", HTTPAPIMultiview)
+		privat.Any("/pages/multiview/full", HTTPAPIFullScreenMultiView)
+		privat.GET("/pages/documentation", HTTPAPIServerDocumentation)
+		privat.GET("/pages/player/all/:uuid/:channel", HTTPAPIPlayAll)
+		privat.StaticFS("/static", http.Dir(Storage.ServerHTTPDir()+"/static"))
 	}
 
 	/*
 		Stream Control elements
 	*/
 
-	privat.GET("/streams", HTTPAPIServerStreams)
+	public.GET("/streams", HTTPAPIServerStreams)
 	privat.POST("/stream/:uuid/add", HTTPAPIServerStreamAdd)
 	privat.POST("/stream/:uuid/edit", HTTPAPIServerStreamEdit)
 	privat.GET("/stream/:uuid/delete", HTTPAPIServerStreamDelete)
@@ -150,7 +150,7 @@ func HTTPAPIServer() {
 
 }
 
-//HTTPAPIServerIndex index file
+// HTTPAPIServerIndex index file
 func HTTPAPIServerIndex(c *gin.Context) {
 	c.HTML(http.StatusOK, "index.tmpl", gin.H{
 		"port":    Storage.ServerHTTPPort(),
@@ -282,7 +282,7 @@ func HTTPAPIFullScreenMultiView(c *gin.Context) {
 	})
 }
 
-//CrossOrigin Access-Control-Allow-Origin any methods
+// CrossOrigin Access-Control-Allow-Origin any methods
 func CrossOrigin() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
