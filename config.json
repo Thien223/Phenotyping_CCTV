@@ -1,26 +1,26 @@
 {
   "server": {
-    "debug": true,
+    "debug": false,
     "http_debug": false,
-    "http_demo": false,
+    "http_demo": true,
     "http_dir": "web",
-    "http_login": "demo",
-    "http_password": "demo",
+    "http_login": "phenotyping",
+    "http_password": "ph3nobox2022",
     "http_port": ":8520",
-    "https": false,
+    "https": true,
     "https_auto_tls": false,
     "https_auto_tls_name": "",
     "https_cert": "server.crt",
     "https_key": "server.key",
     "https_port": ":8443",
     "ice_servers": ["stun:stun.l.google.com:19302"],
-    "log_level": "debug",
+    "log_level": "info",
     "rtsp_port": ":5541",
     "token": {
       "backend": "http://127.0.0.1/test.php"
     },
     "defaults": {
-      "audio": true
+      "audio": false
     }
   },
   "streams": {
