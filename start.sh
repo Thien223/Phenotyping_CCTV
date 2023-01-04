@@ -1,5 +1,5 @@
 #!/bin/sh
 
-/usr/local/go/bin/go run /root/CCTV_node/RTSPtoWeb/*.go
+/usr/local/go/bin/go run /home/itconv/CCTV_node/RTSPtoWeb/*.go
 
 echo "EOF"
