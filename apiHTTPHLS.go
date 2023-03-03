@@ -3,7 +3,7 @@ package main
 import (
 	"bytes"
 	"time"
-
+	"fmt"
 	"github.com/deepch/vdk/format/ts"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
@@ -136,6 +136,9 @@ func HTTPAPIServerStreamHLSTS(c *gin.Context) {
 			"call": "Write",
 		}).Errorln(err.Error())
 		return
+	}else{
+		
+		fmt.Println("Successed..")
 	}
 
 }
